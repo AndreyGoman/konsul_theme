@@ -166,4 +166,6 @@ body {
   background: transparent !important;
 }
 
-#welcomeScreen .pf-c-page__header-brand-link
+#welcomeScreen main.pf-c-page__main .pf-c-page__main-section {
+  box-shadow: none;
+}
