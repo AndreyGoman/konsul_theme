@@ -112,7 +112,7 @@
             </#list>
         </#if>
 
-        
+
         <link rel="stylesheet" type="text/css" href="${resourceCommonUrl}/web_modules/@patternfly/react-core/dist/styles/base.css"/>
         <link rel="stylesheet" type="text/css" href="${resourceCommonUrl}/web_modules/@patternfly/react-core/dist/styles/app.css"/>
         <link rel="stylesheet" type="text/css" href="${resourceCommonUrl}/web_modules/@patternfly/patternfly/patternfly-addons.css"/>
@@ -174,11 +174,7 @@
           <#else>
           <a id="landingLogo" class="pf-c-page__header-brand-link" href="${baseUrl}">
           </#if>
-            <#if properties.logo?has_content>
-            <img class="pf-c-brand brand" src="${resourceUrl}${properties.logo}" alt="Logo">
-            <#else>
-            <img class="pf-c-brand brand" src="${resourceUrl}/public/logo.svg" alt="Logo">
-            </#if>
+            <span>Консул</span>
           </a>
         </div>
         <div class="pf-c-page__header-tools">

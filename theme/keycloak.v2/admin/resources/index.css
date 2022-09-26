@@ -19361,6 +19361,7 @@ label.pf-c-menu__item:where(:not([disabled], .pf-m-disabled)) {
 .pf-c-page > .pf-c-masthead,
 .pf-c-page__header {
   grid-area: header;
+  background-color: #fff !important;
 }
 .pf-c-page__header {
   color: var(--pf-global--Color--100);
@@ -19399,6 +19400,7 @@ label.pf-c-menu__item:where(:not([disabled], .pf-m-disabled)) {
   flex: 1;
   align-items: center;
 }
+
 .pf-c-page__header-brand-link .pf-c-brand {
   max-height: var(--pf-c-page__header-brand-link--c-brand--MaxHeight);
 }

@@ -48,12 +48,11 @@ export class App extends React.Component {
     const Header = /*#__PURE__*/React.createElement(PageHeader, {
       logo: /*#__PURE__*/React.createElement("a", {
         id: "brandLink",
-        href: brandUrl
-      }, /*#__PURE__*/React.createElement(Brand, {
-        src: brandImg,
-        alt: "Logo",
-        className: "brand"
-      })),
+        href: brandUrl,
+        className: "navbar-brand"
+      }, React.createElement("span", {
+
+      }, "Консул")),
       headerTools: /*#__PURE__*/React.createElement(PageHeaderTool, null),
       showNavToggle: true
     });
