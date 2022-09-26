@@ -2,6 +2,12 @@ html,body {
     height: 100%;
 }
 
+body {
+    background: url('../img/background.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 form {
     margin-top: 20px;
 }
@@ -321,21 +327,47 @@ th.w-40 {
 
 .navbar-pf{
   border-top: none!important;
+  background-color: #fff !important;
+  border-bottom: 1px solid #F2F2F2 !important;
+}
+
+.navbar-pf .navbar-header {
+  border: none !important;
+}
+
+.navbar-pf .navbar-utility>li>a, .navbar-pf .navbar-utility>li>button {
+  border: none !important;
 }
 
 .navbar-pf .navbar-brand {
   padding: 0;
   height: 56px;
   line-height: 56px;
-  background-position: center center;
-  background-image: url('../img/keyclok-logo.png');
-  background-size: 148px 30px;
+  background-position: left center;
+  background-image: url('../img/keycloak-logo.svg');
+  background-size: 36px 36px;
   background-repeat: no-repeat;
   width: 148px;
 }
 
+.navbar-pf .navbar-brand span {
+  margin-left: 48px;
+  font-size: 26px;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #002D72 !important;
+}
+
 .navbar-pf .navbar-utility .dropdown-toggle {
     padding: 23px !important;
+}
+
+.navbar-pf .navbar-utility li.dropdown>a {
+    color: black !important;
+}
+
+.navbar-pf .navbar-utility .open .dropdown-menu {
+  border-top-width: 1px !important;
 }
 
 .clickable {
@@ -502,4 +534,3 @@ table.credential-data-table td.key {
     text-align: right;
     font-weight: bold;
 }
-
