@@ -2,10 +2,15 @@ html,body {
     height: 100%;
 }
 
-body {
+html {
     background: url('../img/background.jpg');
     background-repeat: no-repeat;
     background-size: cover;
+    background-attachment: fixed;
+}
+
+body {
+  background: transparent;
 }
 
 form {
