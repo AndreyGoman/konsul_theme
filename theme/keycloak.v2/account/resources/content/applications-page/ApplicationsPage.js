@@ -114,7 +114,6 @@ export class ApplicationsPage extends React.Component {
       ContentPage,
       {
         title: Msg.localize("applicationsPageTitle"),
-        introMessage: "Manage your application permissions.",
       },
       /*#__PURE__*/ React.createElement(
         PageSection,
