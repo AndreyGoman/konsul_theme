@@ -131,7 +131,7 @@ export class ApplicationsPage extends React.Component {
             return React.createElement(
               "div",
               {
-                className: "pf-l-gallery__item",
+                className: "pf-l-gallery__item" + (application.description ? " with-description" : ""),
                 key: "application" + appIndex,
                 onClick: () => window.open(application.effectiveUrl || application.rootUrl),
               },

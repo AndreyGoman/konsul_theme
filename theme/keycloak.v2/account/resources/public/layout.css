@@ -176,6 +176,31 @@ body {
 
 .applications-page-gallery .pf-l-gallery__item {
   cursor: pointer;
+  position: relative;
+}
+
+.applications-page-gallery .pf-l-gallery__item .pf-c-card__body {
+  position: absolute;
+  bottom: 0;
+  opacity: 0;
+  background-color: rgba(255, 255, 255, 0.3);
+  transition: all 0.5s;
+}
+
+.applications-page-gallery .pf-l-gallery__item.with-description:hover .pf-c-card__body {
+  opacity: 1;
+  background-color: rgba(255, 255, 255, 1);
+  transition: all 0.5s;
+}
+
+.applications-page-gallery .pf-l-gallery__item .pf-c-card__title {
+  opacity: 1;
+  transition: all 0.5s;
+}
+
+.applications-page-gallery .pf-l-gallery__item.with-description:hover .pf-c-card__title {
+  opacity: 0;
+  transition: all 0.5s;
 }
 
 .application-image {
