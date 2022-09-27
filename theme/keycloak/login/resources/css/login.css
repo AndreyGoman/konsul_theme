@@ -212,20 +212,26 @@ h1#kc-page-title {
     width: 100%;
 }
 
+input#username, input#password {
+    background-color: white;
+    background-repeat: no-repeat;
+    background-position: 16px center;
+    padding-left: 48px;
+    height: 48px;
+}
+
 input#username {
-  background-image: url(../img/user-icon.svg);
-  background-color: white;
-  background-repeat: no-repeat;
-  background-position: 8px center;
-  padding-left: 32px;
+    background-image: url(../img/user-icon.svg);
+
 }
 
 input#password {
-  background-image: url(../img/password-icon.svg);
-  background-color: white;
-  background-repeat: no-repeat;
-  background-position: 8px center;
-  padding-left: 32px;
+    background-image: url(../img/password-icon.svg);
+    margin-top: 20px;
+}
+
+input[type=submit]#kc-login {
+    padding: 0.875rem;
 }
 
 div.kc-logo-text {
@@ -251,12 +257,18 @@ div.kc-subsystem-title {
     margin: 20px 0px;
 }
 
+.login-pf-page .login-pf-page-header {
+    margin-bottom: 0px !important;
+}
+
 div.kc-subsystem-logo {
-  background-image: url(../img/subsystem-logo.svg);
-  background-repeat: no-repeat;
-  height: 300px;
-  width: 300px;
-  margin: 0 auto;
+    background-image: url(../img/subsystem-logo.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    height: 350px;
+    width: 350px;
+    margin: 0 auto;
 }
 
 #kc-header {
@@ -698,7 +710,7 @@ ul#kc-totp-supported-apps {
 .card-pf {
     padding: 0 20px;
     max-width: 500px;
-    width: 400px;
+    width: 420px;
     border: none;
     background: none;
     box-shadow: none;
