@@ -102,7 +102,7 @@ export class ApplicationsPage extends React.Component {
 
   getApplicationImgUrl(application) {
     let imageName = application.clientId;
-    if (!imageName.includes("ps")) {
+    if (imageName && !imageName.startsWith("sp")) {
       imageName = "default-application-logo";
     }
     return window.resourceUrl + "/public/" + imageName + ".svg";
