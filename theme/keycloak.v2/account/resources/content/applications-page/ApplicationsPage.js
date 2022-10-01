@@ -91,7 +91,23 @@ export class ApplicationsPage extends React.Component {
       const applications = response.data || [];
       this.setState({
         isRowOpen: new Array(applications.length).fill(false),
-        applications: applications,
+        applications: applications.sort(function (a, b) {
+          const keyA = a.clientId.split('sp');
+          const keyB = b.clientId.split('sp');
+          if (
+            keyA.length == 2 &&
+            keyB.length == 2 &&
+            Number(keyA[1]) &&
+            Number(keyB[1])
+          ) {
+            return Number(keyA[1]) - Number(keyB[1])
+          } else if (keyA.length !== 2 || !Number(keyA[1])) {
+            return 1
+          } else if (keyB.length !== 2 || !Number(keyB[1])) {
+            return -1;
+          }
+          return 0;
+        }),
       });
     });
   }
@@ -102,10 +118,10 @@ export class ApplicationsPage extends React.Component {
 
   getApplicationImgUrl(application) {
     let imageName = application.clientId;
-    if (imageName && !imageName.startsWith("sp")) {
-      imageName = "default-application-logo";
+    if (imageName && imageName.startsWith("sp") && imageName.split("sp").length == 2) {
+      return window.resourceUrl + "/public/" + imageName + ".svg";
     }
-    return window.resourceUrl + "/public/" + imageName + ".svg";
+    return window.resourceUrl + "/public/default-application-logo.svg";
   }
 
   render() {
@@ -129,9 +145,12 @@ export class ApplicationsPage extends React.Component {
             return React.createElement(
               "div",
               {
-                className: "pf-l-gallery__item" + (application.description ? " with-description" : ""),
+                className:
+                  "pf-l-gallery__item" +
+                  (application.description ? " with-description" : ""),
                 key: "application" + appIndex,
-                onClick: () => window.open(application.effectiveUrl || application.rootUrl),
+                onClick: () =>
+                  window.open(application.effectiveUrl || application.rootUrl),
               },
               React.createElement(
                 "div",
@@ -156,7 +175,9 @@ export class ApplicationsPage extends React.Component {
                         className:
                           "pf-u-display-flex pf-u-w-100 pf-u-flex-direction-column",
                       },
-                      (application.clientName && Msg.localize(application.clientName)) || application.clientId
+                      (application.clientName &&
+                        Msg.localize(application.clientName)) ||
+                        application.clientId
                     )
                   ),
                   React.createElement(
@@ -167,8 +188,9 @@ export class ApplicationsPage extends React.Component {
                     React.createElement(
                       "div",
                       { className: "pf-u-mb-md application-description" },
-                      application.description && Msg.localize(application.description)
-                    ),
+                      application.description &&
+                        Msg.localize(application.description)
+                    )
                   )
                 )
               )
