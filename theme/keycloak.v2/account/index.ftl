@@ -174,7 +174,7 @@
           <#else>
           <a id="landingLogo" class="pf-c-page__header-brand-link" href="${baseUrl}">
           </#if>
-            <span>Консул</span>
+            <span>${msg("konsul")!"Консул"}</span>
           </a>
         </div>
         <div class="pf-c-page__header-tools">

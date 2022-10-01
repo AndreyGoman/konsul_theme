@@ -21,6 +21,7 @@ import { PageHeaderTool } from "./PageHeaderTool.js";
 import { makeRoutes } from "./ContentPages.js";
 import { Brand, Page, PageHeader, PageSidebar } from "../../common/keycloak/web_modules/@patternfly/react-core.js";
 import { KeycloakContext } from "./keycloak-service/KeycloakContext.js";
+import { Msg } from "./widgets/Msg.js";
 ;
 export class App extends React.Component {
   constructor(props, context) {
@@ -52,7 +53,7 @@ export class App extends React.Component {
         className: "navbar-brand"
       }, React.createElement("span", {
 
-      }, "Консул")),
+      }, (Msg.localize("konsul") || "Консул"))),
       headerTools: /*#__PURE__*/React.createElement(PageHeaderTool, null),
       showNavToggle: true
     });
