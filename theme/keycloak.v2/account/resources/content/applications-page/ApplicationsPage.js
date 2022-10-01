@@ -156,7 +156,7 @@ export class ApplicationsPage extends React.Component {
                         className:
                           "pf-u-display-flex pf-u-w-100 pf-u-flex-direction-column",
                       },
-                      Msg.localize(application.clientName) || application.clientId
+                      (application.clientName && Msg.localize(application.clientName)) || application.clientId
                     )
                   ),
                   React.createElement(
@@ -167,7 +167,7 @@ export class ApplicationsPage extends React.Component {
                     React.createElement(
                       "div",
                       { className: "pf-u-mb-md application-description" },
-                      Msg.localize(application.description)
+                      application.description && Msg.localize(application.description)
                     ),
                   )
                 )
