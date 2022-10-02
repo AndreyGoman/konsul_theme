@@ -91,7 +91,10 @@ export class ApplicationsPage extends React.Component {
       const applications = response.data || [];
       this.setState({
         isRowOpen: new Array(applications.length).fill(false),
-        applications: applications.sort(function (a, b) {
+        applications: applications.filter(function(application) {
+          const clientId = application.clientId;
+          return clientId && clientId.startsWith("sp") && clientId.split('sp').length == 2;
+        }).sort(function (a, b) {
           const keyA = a.clientId.split('sp');
           const keyB = b.clientId.split('sp');
           if (
