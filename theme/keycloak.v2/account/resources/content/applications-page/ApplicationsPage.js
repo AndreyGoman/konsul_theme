@@ -56,6 +56,7 @@ import { ContentPage } from "../ContentPage.js";
 import { ContinueCancelModal } from "../../widgets/ContinueCancelModal.js";
 import { AccountServiceContext } from "../../account-service/AccountServiceContext.js";
 import { Msg } from "../../widgets/Msg.js";
+
 export class ApplicationsPage extends React.Component {
   constructor(props, context) {
     super(props);
@@ -93,10 +94,16 @@ export class ApplicationsPage extends React.Component {
         isRowOpen: new Array(applications.length).fill(false),
         applications: applications.filter(function(application) {
           const clientId = application.clientId;
-          return clientId && clientId.startsWith("sp") && clientId.split('sp').length == 2;
+          if (clientId == "security-admin-console") return true;
+          if (clientId.startsWith("sp") && clientId.split('sp').length == 2) return true;
+          return false;
         }).sort(function (a, b) {
-          const keyA = a.clientId.split('sp');
-          const keyB = b.clientId.split('sp');
+          let clientIdA = a.clientId;
+          let clientIdB = b.clientId;
+          if (clientIdA == "security-admin-console") clientIdA = "sp3";
+          if (clientIdB == "security-admin-console") clientIdB = "sp3";
+          const keyA = clientIdA.split('sp');
+          const keyB = clientIdB.split('sp');
           if (
             keyA.length == 2 &&
             keyB.length == 2 &&
@@ -121,6 +128,7 @@ export class ApplicationsPage extends React.Component {
 
   getApplicationImgUrl(application) {
     let imageName = application.clientId;
+    if (imageName == "security-admin-console") imageName = "sp3";
     if (imageName && imageName.startsWith("sp") && imageName.split("sp").length == 2) {
       return window.resourceUrl + "/public/" + imageName + ".svg";
     }
