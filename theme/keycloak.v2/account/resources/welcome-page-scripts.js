@@ -38,6 +38,7 @@ var toggleReact = function () {
         if (spinnerScreen) spinnerScreen.style.display = 'none';
         if (welcomeScreen) welcomeScreen.style.display = 'block';
         if (welcomeScreen) welcomeScreen.style.height = '100%';
+        window.location.hash = "applications";
     }
 };
 
@@ -64,7 +65,7 @@ function sanitize(dirtyString) {
     return element.innerHTML;
 }
 
-var toggleMobileDropdown = function () {	
+var toggleMobileDropdown = function () {
     var mobileDropdown = document.getElementById("landingMobileDropdown");
     var mobileKebab = document.getElementById("landingMobileKebab");
     var mobileKebabButton = document.getElementById("landingMobileKebabButton");
