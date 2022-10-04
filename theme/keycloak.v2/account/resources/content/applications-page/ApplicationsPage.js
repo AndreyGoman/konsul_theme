@@ -139,7 +139,7 @@ export class ApplicationsPage extends React.Component {
     return /*#__PURE__*/ React.createElement(
       ContentPage,
       {
-        title: Msg.localize("applicationsPageTitle"),
+        title: "",
       },
       /*#__PURE__*/ React.createElement(
         PageSection,

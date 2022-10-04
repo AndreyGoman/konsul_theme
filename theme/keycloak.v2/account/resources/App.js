@@ -54,16 +54,11 @@ export class App extends React.Component {
       }, React.createElement("span", {
 
       }, (Msg.localize("konsul") || "Консул"))),
-      headerTools: /*#__PURE__*/React.createElement(PageHeaderTool, null),
-      showNavToggle: true
-    });
-    const Sidebar = /*#__PURE__*/React.createElement(PageSidebar, {
-      nav: /*#__PURE__*/React.createElement(PageNav, null)
+      headerTools: /*#__PURE__*/React.createElement(PageHeaderTool, null)
     });
     return /*#__PURE__*/React.createElement(Page, {
       header: Header,
-      sidebar: Sidebar,
-      isManagedSidebar: true
+      isManagedSidebar: false
     }, makeRoutes());
   }
 
