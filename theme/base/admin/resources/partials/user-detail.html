@@ -138,7 +138,7 @@
 
                 <div class="col-md-6">
                     <select ui-select2 id="reqActions" ng-model="user.requiredActions" data-placeholder="{{:: 'select-an-action.placeholder' | translate}}" multiple>
-                        <option ng-repeat="action in userReqActionList" value="{{action.alias}}">{{action.name}}</option>
+                        <option ng-repeat="action in userReqActionList" value="{{action.alias}}">{{:: 'reqActions.' + action.alias | translate}}</option>
                     </select>
                 </div>
                 <kc-tooltip>{{:: 'required-user-actions.tooltip' | translate}}</kc-tooltip>
