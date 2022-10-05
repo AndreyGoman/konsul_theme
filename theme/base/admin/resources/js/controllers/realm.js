@@ -2152,7 +2152,7 @@ module.controller('RealmRevocationCtrl', function($scope, Realm, RealmPushRevoca
 
     var setNotBefore = function() {
         if ($scope.realm.notBefore == 0) {
-            $scope.notBefore = "None";
+            $scope.notBefore = "";
         } else {
             $scope.notBefore = new Date($scope.realm.notBefore * 1000);
         }
@@ -2170,7 +2170,7 @@ module.controller('RealmRevocationCtrl', function($scope, Realm, RealmPushRevoca
 
     $scope.clear = function() {
         Realm.update({ realm: realm.realm, notBefore : 0 }, function () {
-            $scope.notBefore = "None";
+            $scope.notBefore = "";
             Notifications.success('Not Before cleared for realm.');
             reset();
         });

@@ -23,10 +23,10 @@
         <div class="form-group clearfix">
             <label class="col-md-2 control-label"></label>
             <div class="col-md-6">
-                <input class="form-control ng-pristine ng-untouched ng-empty ng-invalid" id="newLocale" type="text" ng-model="newLocale" placeholder="locale">
+                <input class="form-control ng-pristine ng-untouched ng-empty ng-invalid" id="newLocale" type="text" ng-model="newLocale" placeholder="{{:: 'locale' | translate }}">
             </div>
             <div class="col-sm-4">
-                <button class="btn btn-primary ng-binding" type="submit" data-ng-click="createLocale()">Create</button>
+                <button class="btn btn-primary ng-binding" type="submit" data-ng-click="createLocale()">{{:: 'create' | translate }}</button>
             </div>
         </div>
     </form>
