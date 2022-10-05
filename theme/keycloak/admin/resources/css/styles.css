@@ -539,3 +539,8 @@ table.credential-data-table td.key {
     text-align: right;
     font-weight: bold;
 }
+
+.container-fluid {
+  background-color: rgba(255,255,255,0.5);
+  border-top: 2px solid white;
+}
