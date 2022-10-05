@@ -116,9 +116,9 @@ angular.element(document).ready(function () {
                     document.title = consoleTitle;
                 });
             });
+            loadSelect2Localization();
         });
 
-        loadSelect2Localization();
     }).catch(function () {
         window.location.reload();
     });
