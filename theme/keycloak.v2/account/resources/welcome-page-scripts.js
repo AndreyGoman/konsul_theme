@@ -22,7 +22,8 @@ var toggleReact = function () {
     var welcomeScreen = document.getElementById("welcomeScreen");
     var spinnerScreen = document.getElementById("spinner_screen");
     var reactScreen = document.getElementById("main_react_container");
-
+    window.location.hash = "applications";
+    
     if (!isWelcomePage() && !isReactLoading) {
         if (welcomeScreen) welcomeScreen.style.display = 'none';
         if (spinnerScreen) spinnerScreen.style.display = 'none';
@@ -38,7 +39,6 @@ var toggleReact = function () {
         if (spinnerScreen) spinnerScreen.style.display = 'none';
         if (welcomeScreen) welcomeScreen.style.display = 'block';
         if (welcomeScreen) welcomeScreen.style.height = '100%';
-        window.location.hash = "applications";
     }
 };
 
