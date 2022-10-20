@@ -540,15 +540,20 @@ table.credential-data-table td.key {
   border-radius: 5px !important;
 }
 
-.btn-primary:not(:disabled), .btn[type=submit]:not(:disabled), a.btn.ng-binding:not(:disabled) {
-  border: none !important;
-  background: #406195 !important;
-}
-
 .btn-default:not(:disabled), .btn[kc-reset]:not(:disabled) {
   border: none !important;
   background: #919191 !important;
   color: white !important;
+}
+
+.btn-primary:not(:disabled),
+.btn[type=submit]:not(:disabled),
+a.btn.ng-binding:not(:disabled),
+.btn#createGroup,
+.btn#viewAllGroups,
+.btn#viewAllUsers {
+  border: none !important;
+  background: #406195 !important;
 }
 
 form input.form-control {
