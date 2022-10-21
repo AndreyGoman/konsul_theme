@@ -21,6 +21,10 @@ export class KeycloakService {
     _defineProperty(this, "keycloakAuth", void 0);
 
     this.keycloakAuth = keycloak;
+    this.userInfo = {};
+    this.doGet("/").then((response) => {
+      this.userInfo = response.data;
+    });
   }
 
   authenticated() {
@@ -57,6 +61,64 @@ export class KeycloakService {
 
   realm() {
     return this.keycloakAuth.realm;
+  }
+
+  async doGet(endpoint, config) {
+    return this.doRequest(endpoint, { ...config,
+      method: 'get'
+    });
+  }
+
+  async doPost(endpoint, body, config) {
+    return this.doRequest(endpoint, { ...config,
+      body: JSON.stringify(body),
+      method: 'post'
+    });
+  }
+
+  async doRequest(endpoint, config) {
+    const response = await fetch(this.makeUrl(endpoint, config).toString(), await this.makeConfig(config));
+
+    try {
+      response.data = await response.json();
+    } catch (e) {} // ignore.  Might be empty
+
+
+    if (!response.ok) {
+      this.handleError(response);
+      throw new AccountServiceError(response);
+    }
+
+    return response;
+  }
+
+  makeUrl(endpoint, config) {
+    if (endpoint.startsWith('http')) return new URL(endpoint);
+    const accountUrl = this.authServerUrl() + 'realms/' + this.realm() + '/account'
+    const url = new URL(accountUrl + endpoint); // add request params
+
+    if (config && config.hasOwnProperty('params')) {
+      const params = config.params || {};
+      Object.keys(params).forEach(key => url.searchParams.append(key, params[key]));
+    }
+
+    return url;
+  }
+
+  makeConfig(config = {}) {
+    return new Promise(resolve => {
+      this.getToken().then(token => {
+        resolve({ ...config,
+          headers: {
+            'Content-Type': 'application/json',
+            ...config.headers,
+            Authorization: 'Bearer ' + token
+          }
+        });
+      }).catch(() => {
+        this.login();
+      });
+    });
   }
 
   getToken() {

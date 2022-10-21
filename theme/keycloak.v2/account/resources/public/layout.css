@@ -175,6 +175,53 @@ body {
   box-shadow: none;
 }
 
+.react-list-root {
+  position: relative;
+}
+
+.react-list-root .react-list {
+  display: none;
+  border: 1px solid gray;
+  border-top: none;
+  position: absolute;
+  background: white;
+  text-align: center;
+  right: 0;
+  width: 100%;
+}
+
+.react-list-locales {
+  display: flex;
+}
+
+.react-list-locales .pf-c-button {
+  padding-left: 2px;
+  padding-right: 2px;
+}
+
+.react-list-root .react-list .pf-c-button {
+  width: 100%;
+  cursor: pointer;
+}
+
+.react-list-user-info {
+  display: flex;
+  min-width: 150px;
+  align-items: center;
+  justify-content: space-around;
+  column-gap: 12px;
+ }
+
+.react-list-user-info img {
+  background: lightgray;
+  padding: 8px;
+  border-radius: 50%;
+}
+
+.react-list-root:hover .react-list {
+  display: block;
+}
+
 .applications-page-gallery {
   min-width: 900px;
   max-width: 960px;

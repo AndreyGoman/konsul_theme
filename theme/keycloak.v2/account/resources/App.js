@@ -28,7 +28,6 @@ export class App extends React.Component {
     super(props);
 
     _defineProperty(this, "context", void 0);
-
     this.context = context;
     toggleReact();
   }
@@ -39,6 +38,8 @@ export class App extends React.Component {
     if (!this.context.authenticated() && !isWelcomePage()) {
       this.context.login();
     }
+
+    const app_context = this.context;
 
     const username = /*#__PURE__*/React.createElement("span", {
       style: {
@@ -54,7 +55,9 @@ export class App extends React.Component {
       }, React.createElement("span", {
 
       }, (Msg.localize("konsul") || "Консул"))),
-      headerTools: /*#__PURE__*/React.createElement(PageHeaderTool, null)
+      headerTools: /*#__PURE__*/React.createElement(PageHeaderTool, {
+        context: app_context
+      })
     });
     return /*#__PURE__*/React.createElement(Page, {
       header: Header,
