@@ -56,44 +56,16 @@
       {
         "name": "base",
         "locales": [
-          "ca",
-          "de",
           "en",
-          "es",
-          "fr",
-          "it",
-          "ja",
-          "lt",
-          "lv",
-          "nl",
-          "no",
-          "pl",
-          "pt-BR",
-          "ru",
-          "sv",
-          "zh-CN"
-        ]
+          "ru"
+       ]
       },
       {
         "name": "keycloak",
         "locales": [
-          "ca",
-          "de",
           "en",
-          "es",
-          "fr",
-          "it",
-          "ja",
-          "lt",
-          "lv",
-          "nl",
-          "no",
-          "pl",
-          "pt-BR",
-          "ru",
-          "sv",
-          "zh-CN"
-        ]
+          "ru"
+       ]
       },
       { "name": "keycloak.v2" }
     ],
@@ -101,52 +73,16 @@
       {
         "name": "base",
         "locales": [
-          "ca",
-          "cs",
-          "da",
-          "de",
           "en",
-          "es",
-          "fr",
-          "hu",
-          "it",
-          "ja",
-          "lt",
-          "nl",
-          "no",
-          "pl",
-          "pt-BR",
-          "ru",
-          "sk",
-          "sv",
-          "tr",
-          "zh-CN"
-        ]
+          "ru"
+       ]
       },
       {
         "name": "keycloak",
         "locales": [
-          "ca",
-          "cs",
-          "da",
-          "de",
           "en",
-          "es",
-          "fr",
-          "hu",
-          "it",
-          "ja",
-          "lt",
-          "nl",
-          "no",
-          "pl",
-          "pt-BR",
-          "ru",
-          "sk",
-          "sv",
-          "tr",
-          "zh-CN"
-        ]
+          "ru"
+       ]
       }
     ],
     "welcome": [{ "name": "keycloak" }],
@@ -154,129 +90,39 @@
       {
         "name": "base",
         "locales": [
-          "ca",
-          "cs",
-          "da",
-          "de",
           "en",
-          "es",
-          "fr",
-          "hu",
-          "it",
-          "ja",
-          "lt",
-          "nl",
-          "no",
-          "pl",
-          "pt-BR",
-          "ru",
-          "sk",
-          "sv",
-          "tr",
-          "zh-CN"
-        ]
+          "ru"
+       ]
       },
       {
         "name": "keycloak",
         "locales": [
-          "ca",
-          "cs",
-          "da",
-          "de",
           "en",
-          "es",
-          "fr",
-          "hu",
-          "it",
-          "ja",
-          "lt",
-          "nl",
-          "no",
-          "pl",
-          "pt-BR",
-          "ru",
-          "sk",
-          "sv",
-          "tr",
-          "zh-CN"
-        ]
+          "ru"
+       ]
       },
       {
         "name": "keycloak.v2",
         "locales": [
-          "ca",
-          "cs",
-          "da",
-          "de",
           "en",
-          "es",
-          "fr",
-          "hu",
-          "it",
-          "ja",
-          "lt",
-          "nl",
-          "no",
-          "pl",
-          "pt-BR",
-          "ru",
-          "sk",
-          "sv",
-          "tr",
-          "zh-CN"
-        ]
+          "ru"
+       ]
       }
     ],
     "email": [
       {
         "name": "base",
         "locales": [
-          "ca",
-          "cs",
-          "da",
-          "de",
           "en",
-          "es",
-          "fr",
-          "hu",
-          "it",
-          "ja",
-          "lt",
-          "nl",
-          "no",
-          "pl",
-          "pt-BR",
-          "ru",
-          "sk",
-          "sv",
-          "tr",
-          "zh-CN"
-        ]
+          "ru"
+       ]
       },
       {
         "name": "keycloak",
         "locales": [
-          "ca",
-          "cs",
-          "da",
-          "de",
           "en",
-          "es",
-          "fr",
-          "hu",
-          "it",
-          "ja",
-          "lt",
-          "nl",
-          "no",
-          "pl",
-          "pt-BR",
-          "ru",
-          "sk",
-          "sv",
-          "tr",
-          "zh-CN"
-        ]
+          "ru"
+       ]
       }
     ]
   },

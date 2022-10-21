@@ -29,31 +29,31 @@ function _defineProperty(obj, key, value) {
  */
 import * as React from "../../../../common/keycloak/web_modules/react.js";
 import {
-  DataList,
-  DataListItem,
-  DataListItemRow,
-  DataListCell,
-  DataListToggle,
-  DataListContent,
-  DataListItemCells,
-  DescriptionList,
-  DescriptionListTerm,
-  DescriptionListGroup,
-  DescriptionListDescription,
-  Grid,
-  GridItem,
-  Button,
+  // DataList,
+  // DataListItem,
+  // DataListItemRow,
+  // DataListCell,
+  // DataListToggle,
+  // DataListContent,
+  // DataListItemCells,
+  // DescriptionList,
+  // DescriptionListTerm,
+  // DescriptionListGroup,
+  // DescriptionListDescription,
+  // Grid,
+  // GridItem,
+  // Button,
   PageSection,
   PageSectionVariants,
-  Stack,
+  // Stack,
 } from "../../../../common/keycloak/web_modules/@patternfly/react-core.js";
-import {
-  InfoAltIcon,
-  CheckIcon,
-  ExternalLinkAltIcon,
-} from "../../../../common/keycloak/web_modules/@patternfly/react-icons.js";
+// import {
+//   InfoAltIcon,
+//   CheckIcon,
+//   ExternalLinkAltIcon,
+// } from "../../../../common/keycloak/web_modules/@patternfly/react-icons.js";
 import { ContentPage } from "../ContentPage.js";
-import { ContinueCancelModal } from "../../widgets/ContinueCancelModal.js";
+// import { ContinueCancelModal } from "../../widgets/ContinueCancelModal.js";
 import { AccountServiceContext } from "../../account-service/AccountServiceContext.js";
 import { Msg } from "../../widgets/Msg.js";
 
