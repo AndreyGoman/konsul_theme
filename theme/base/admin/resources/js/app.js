@@ -54,9 +54,7 @@ angular.element(document).ready(function () {
 
     function loadSelect2Localization() {
         // 'en' is the built-in default and does not have to be loaded.
-        var supportedLocales = ['ar', 'az', 'bg', 'ca', 'cs', 'da', 'de', 'el', 'es', 'et', 'eu', 'fa', 'fi', 'fr',
-            'gl', 'he', 'hr', 'hu', 'id', 'is', 'it', 'ja', 'ka', 'ko', 'lt', 'lv', 'mk', 'ms', 'nl', 'no', 'pl',
-            'pt-BR', 'pt-PT', 'ro', 'rs', 'ru', 'sk', 'sv', 'th', 'tr', 'ug-CN', 'uk', 'vi', 'zh-CN', 'zh-TW'];
+        var supportedLocales = ['en', "ru"];
         if (supportedLocales.indexOf(locale) == -1) return;
         var select2JsUrl;
         var allScriptElements = document.getElementsByTagName('script');
@@ -2690,7 +2688,7 @@ module.directive('kcNoReservedChars', function (Notifications, $translate) {
     return function($scope, element) {
         element.bind("keypress", function(event) {
             var keyPressed = String.fromCharCode(event.which || event.keyCode || 0);
-            
+
             // ] and ' can not be used inside a character set on POSIX and GNU
             if (keyPressed.match('[:/?#[@!$&()*+,;=]') || keyPressed === ']' || keyPressed === '\'') {
                 event.preventDefault();
@@ -3022,7 +3020,7 @@ module.controller('RoleSelectorModalCtrl', function($scope, realm, config, confi
     }
 
     clientSelectControl($scope, realm.realm, Client);
-    
+
     $scope.selectedClient = null;
 
     $scope.changeClient = function(client) {
@@ -3218,7 +3216,7 @@ module.controller('ProviderConfigCtrl', function ($modal, $scope, $route, Compon
                     $scope.selectedClient.text = $scope.selectedClient.clientId;
                 }
             });
-        }   
+        }
     }
 
     $scope.openRoleSelector = function (configName, config) {
@@ -3441,7 +3439,7 @@ module.controller('ComponentConfigCtrl', function ($modal, $scope, $route, Clien
                     $scope.selectedClient.text = $scope.selectedClient.clientId;
                 }
             });
-        }   
+        }
     }
 
     $scope.changeClient = function(configName, config, client) {
@@ -3724,12 +3722,12 @@ module.controller('PagingCtrl', function ($scope) {
 // Provides a component for injection with utility methods for manipulating strings
 module.factory('KcStrings', function () {
     var instance = {};
-    
+
     // some IE versions do not support string.endsWith method, this method should be used as an alternative for cross-browser compatibility
     instance.endsWith = function(source, suffix) {
         return source.indexOf(suffix, source.length - suffix.length) !== -1;
     };
-    
+
     return instance;
 });
 
