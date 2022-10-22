@@ -161,7 +161,7 @@ export class ApplicationsPage extends React.Component {
                   (application.description ? " with-description" : ""),
                 key: "application" + appIndex,
                 onClick: () =>
-                  window.open(application.effectiveUrl || application.rootUrl),
+                  window.open(application.effectiveUrl || application.rootUrl, "_self"),
               },
               React.createElement(
                 "div",
