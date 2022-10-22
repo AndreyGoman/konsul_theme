@@ -39,8 +39,14 @@
 <body class="${properties.kcBodyClass!}">
 <div class="${properties.kcLoginClass!}">
     <div id="kc-header" class="${properties.kcHeaderClass!}">
-        <div id="kc-header-wrapper"
-             class="${properties.kcHeaderWrapperClass!}">${kcSanitize(msg("loginTitleHtml",(realm.displayNameHtml!'')))?no_esc}</div>
+      <div id="kc-header-wrapper" class="${properties.kcHeaderWrapperClass!}">
+          <div class="kc-logo-text">
+            <span>${ msg("konsul") }</span>
+          </div>
+          <div class="kc-subsystem-title">
+            <div>${ msg("konsulFull") }</div>
+          </div>
+      </div>
     </div>
     <div class="${properties.kcFormCardClass!}">
         <header class="${properties.kcFormHeaderClass!}">
