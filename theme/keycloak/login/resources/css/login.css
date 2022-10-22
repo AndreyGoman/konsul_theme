@@ -8,6 +8,7 @@
 .login-pf body {
     background: url("../img/keycloak-bg.jpg") no-repeat center center fixed;
     background-size: cover;
+    background-position: top left;
     height: 100%;
     display: flex;
     align-items: center;
@@ -275,7 +276,7 @@ div.kc-subsystem-logo {
     overflow: visible;
     white-space: nowrap;
     zoom: 1.3;
-    width: 70%;
+    width: 63%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -553,8 +554,21 @@ ul#kc-totp-supported-apps {
 
 @media (max-width: 767px) {
 
-    .login-pf body {
-        background: white;
+    #kc-header div.kc-logo-text {
+      background: none;
+      color: white;
+    }
+
+    #kc-header .kc-subsystem-title {
+      visibility: hidden;
+    }
+
+    #kc-header +  .card-pf {
+      margin: auto;
+    }
+
+    input#kc-login {
+      box-shadow: 0 0 5px 1px rgba(0,0,0, 0.2);
     }
 
     #kc-header {
