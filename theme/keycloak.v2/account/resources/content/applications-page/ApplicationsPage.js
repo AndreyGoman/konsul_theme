@@ -136,7 +136,12 @@ export class ApplicationsPage extends React.Component {
   }
 
   handleAppClick(application) {
-    this.context.doGet(application.effectiveUrl || application.rootUrl).then((response) => {
+    this.context.doGet(application.effectiveUrl || application.rootUrl, {
+      mode: 'no-cors',
+      headers: {
+        'Content-Type': 'text/html; charset=utf-8',
+      }
+    }).then((response) => {
       console.log('doGet: THEN:', { response });
     }).catch((error) => {
       console.log('doGet: CATCH:', error);
