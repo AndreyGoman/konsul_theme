@@ -135,6 +135,15 @@ export class ApplicationsPage extends React.Component {
     return window.resourceUrl + "/public/default-application-logo.svg";
   }
 
+  handleAppClick(application) {
+    fetch(application.effectiveUrl || application.rootUrl).then((data) => {
+      console.log('then', data);
+    }).catch((e) => {
+      console.log('catch', e);
+    });
+    window.open(application.effectiveUrl || application.rootUrl)
+  }
+
   render() {
     return /*#__PURE__*/ React.createElement(
       ContentPage,
@@ -160,8 +169,7 @@ export class ApplicationsPage extends React.Component {
                   "pf-l-gallery__item" +
                   (application.description ? " with-description" : ""),
                 key: "application" + appIndex,
-                onClick: () =>
-                  window.open(application.effectiveUrl || application.rootUrl, "_self"),
+                onClick: () => this.handleAppClick(application)
               },
               React.createElement(
                 "div",
