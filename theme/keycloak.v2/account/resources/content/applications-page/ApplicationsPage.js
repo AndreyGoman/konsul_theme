@@ -136,6 +136,10 @@ export class ApplicationsPage extends React.Component {
   }
 
   handleAppClick(application) {
+    window.open(application.effectiveUrl || application.rootUrl, '_self');
+  }
+
+  checkAccess(application) {
     this.context.doGet(application.effectiveUrl || application.rootUrl, {
       mode: 'no-cors',
       headers: {
@@ -146,7 +150,6 @@ export class ApplicationsPage extends React.Component {
     }).catch((error) => {
       console.log('doGet: CATCH:', error);
     });
-    window.open(application.effectiveUrl || application.rootUrl)
   }
 
   render() {
@@ -174,7 +177,9 @@ export class ApplicationsPage extends React.Component {
                   "pf-l-gallery__item" +
                   (application.description ? " with-description" : ""),
                 key: "application" + appIndex,
-                onClick: () => this.handleAppClick(application)
+                onClick: () => this.handleAppClick(application),
+                onContextMenu: () => this.checkAccess(application),
+                onDoubleClick:  () => this.checkAccess(application)
               },
               React.createElement(
                 "div",
