@@ -136,10 +136,10 @@ export class ApplicationsPage extends React.Component {
   }
 
   handleAppClick(application) {
-    fetch(application.effectiveUrl || application.rootUrl).then((data) => {
-      console.log('then', data);
-    }).catch((e) => {
-      console.log('catch', e);
+    this.context.doGet(application.effectiveUrl || application.rootUrl).then((response) => {
+      console.log('doGet: THEN:', { response });
+    }).catch((error) => {
+      console.log('doGet: CATCH:', error);
     });
     window.open(application.effectiveUrl || application.rootUrl)
   }
