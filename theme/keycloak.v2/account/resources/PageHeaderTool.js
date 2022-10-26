@@ -101,14 +101,6 @@ export class PageHeaderTool extends React.Component {
     return /*#__PURE__*/ React.createElement(
       PageHeaderTools,
       null,
-      this.hasReferrer &&
-        /*#__PURE__*/ React.createElement(
-          "div",
-          {
-            className: "pf-c-page__header-tools-group",
-          },
-          /*#__PURE__*/ React.createElement(ReferrerLink, null)
-        ),
       /*#__PURE__*/ React.createElement(
         "div",
         {
