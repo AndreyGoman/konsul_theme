@@ -271,6 +271,30 @@ div.kc-subsystem-logo {
     margin: 0 auto;
 }
 
+div.kc-new-login-title-block {
+  display: flex;
+  column-gap: 14px;
+  align-items: center;
+  margin-left: 14px;
+  white-space: nowrap;
+}
+
+div.kc-new-login-logo {
+  background-image: url(../img/keycloak-logo-text.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  width: 68px;
+  height: 68px;
+}
+
+div.kc-new-login-title {
+  font-size: 38px;
+  text-align: left;
+  line-height: 38px;
+  font-weight: 600;
+}
+
 #kc-header {
     color: #ededed;
     overflow: visible;
@@ -279,7 +303,6 @@ div.kc-subsystem-logo {
     width: 63%;
     display: flex;
     align-items: center;
-    justify-content: center;
 }
 
 #kc-header-wrapper {

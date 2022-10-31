@@ -40,11 +40,12 @@
 <div class="${properties.kcLoginClass!}">
     <div id="kc-header" class="${properties.kcHeaderClass!}">
       <div id="kc-header-wrapper" class="${properties.kcHeaderWrapperClass!}">
-          <div class="kc-logo-text">
-            <span>${ msg("konsul") }</span>
-          </div>
-          <div class="kc-subsystem-title">
-            <div>${ msg("konsulFull") }</div>
+          <div class="kc-new-login-title-block">
+            <div class="kc-new-login-logo"></div>
+            <div class="kc-new-login-title">
+              <div class="kc-new-login-title-first-line">${ msg("konsul-first-line") }</div>
+              <div class="kc-new-login-title-second-line">${ msg("konsul-second-line") }</div>
+            </div>
           </div>
       </div>
     </div>
